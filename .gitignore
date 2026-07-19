@@ -1,0 +1,40 @@
+# ==================== KONFIGURASI SENSITIF ====================
+# config.php berisi password DB & API keys — JANGAN di-commit!
+# Tim member: copy config.example.php → config.php lalu isi credential masing-masing
+config.php
+
+# ==================== UPLOADS ====================
+# File yang diupload user (foto, proposal, bukti, dll)
+uploads/laporan/*
+uploads/relawan/*
+uploads/qrcodes/*
+!uploads/laporan/.gitkeep
+!uploads/relawan/.gitkeep
+!uploads/qrcodes/.gitkeep
+
+# ==================== DEPENDENCIES ====================
+vendor/
+node_modules/
+composer.lock
+package-lock.json
+
+# ==================== IDE & EDITOR ====================
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# ==================== OS ====================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==================== ENVIRONMENT ====================
+.env
+.env.local
+.env.*.local
+
+# ==================== LOG & TEMP ====================
+*.log
+tmp/
+temp/
