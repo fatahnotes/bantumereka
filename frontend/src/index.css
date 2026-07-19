@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --deep-blue: #0A2540;
+    --soft-blue: #E8F0FE;
+    --cream: #FFF8F0;
+    --primary-red: #C62828;
+    --accent-gold: #D4AF37;
+    --light-gold: #F9E79F;
+    --white: #FFFFFF;
+    --text-dark: #1E272E;
+    --text-grey: #5A6D7C;
+    --radius: 16px;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: var(--text-dark);
+    background: var(--white);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 md:px-6;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-full font-bold shadow-lg
+           hover:bg-primary-dark transition-all duration-200
+           hover:shadow-xl active:scale-[0.98];
+  }
+
+  .btn-gold {
+    @apply bg-gold text-deep px-6 py-3 rounded-full font-bold shadow-md
+           hover:bg-gold-dark hover:text-white transition-all duration-200;
+  }
+
+  .btn-outline {
+    @apply border-2 border-deep text-deep px-6 py-3 rounded-full font-semibold
+           hover:bg-deep hover:text-white transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-extrabold text-deep text-center;
+  }
+
+  .section-subtitle {
+    @apply text-gray-500 text-center mt-3 max-w-2xl mx-auto;
+  }
+}
+
+/* Slick slider overrides */
+.slick-dots { display: none !important; }
+.slick-slide { padding: 0 8px; }
